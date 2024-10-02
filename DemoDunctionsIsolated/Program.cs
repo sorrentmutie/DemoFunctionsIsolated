@@ -1,3 +1,5 @@
+using DemoFunctionsIsolated.Library;
+
 var host = new HostBuilder()
     .ConfigureFunctionsWebApplication()
     .ConfigureServices(services =>
@@ -5,6 +7,7 @@ var host = new HostBuilder()
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();
         services.AddScoped<IClock, SystemClock>();
+        services.AddScoped<IStudentsData, StudentsService>();
     })
     .Build();
 
