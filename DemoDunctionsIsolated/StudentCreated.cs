@@ -22,7 +22,7 @@ namespace DemoFunctionsIsolated
 
         [Function("StudentCreated")]
         [QueueOutput("studenti-immatricolati")]
-        public string Run([TimerTrigger("0 */10 * * * *")] TimerInfo myTimer)
+        public string Run([TimerTrigger("0 */1 * * * *")] TimerInfo myTimer)
         {
             _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
