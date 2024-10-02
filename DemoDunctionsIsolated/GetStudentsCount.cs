@@ -17,7 +17,7 @@ namespace DemoFunctionsIsolated
         }
 
         [Function("GetStudentsCount")]
-        public async Task Run([TimerTrigger("0 */10 * * * *")] TimerInfo myTimer)
+        public async Task Run([TimerTrigger("0 */12 * * * *")] TimerInfo myTimer)
         {
             _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
             var students = await studentsData.GetStudents();
